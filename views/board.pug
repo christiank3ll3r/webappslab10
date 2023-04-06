@@ -1,0 +1,40 @@
+extends layout
+
+block content
+head
+  title Board Display
+body
+    p query.rows
+    P query.cols
+
+-
+    rows = Number(query.rows)
+    col = Number(query.cols)
+
+    Number.isInteger(rows)
+    if (yes)
+        p row is an integer
+    if (no)
+        p row isnt an integer
+
+    Number.isInteger(cols)
+    if (yes)
+        p cols is an integer
+    if (no)
+        p cols isnt an integer
+
+
+    if (rows > 10)
+        p rows is out of range 
+
+    if (cols > 10)
+        p cols is out of range
+
+        table#outer
+            - for(let i=0; i<10s; i++) {
+            - }
+                 tr#middle
+                    - for(let j=0; j<10s; j++) {
+                    - }
+                        td contents = value
+
