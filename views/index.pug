@@ -1,7 +1,21 @@
 extends layout
 
 block content
+head
+  title Assignment 10
+body
   h1= title
   p Welcome to #{title} I'm Christian
 
-  button(type="button") Press Me
+  button(type="button" onclick=doReduce()) Press Me
+
+  div(id="reduce") Count 20 with change -1
+
+  script
+    count = 20
+    change = -1
+
+    doReduce(){
+      count = count - change
+      change = change - 1
+    }
